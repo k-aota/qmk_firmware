@@ -53,11 +53,11 @@ void loop() {
   outputValue_Y = map(sensorValue_Y, 0, 1023, 0, 255);
 
   // 選択画面時のみカウントが動く
-  if (outputValue_Y < 1){
-    if (outputValue_X > 1){
+  if (outputValue_Y < 20){
+    if (outputValue_X > 70){
       pos_cnt = pos_cnt+1;
     };
-    if (outputValue_X < 1){
+    if (outputValue_X < 20){
       pos_cnt = pos_cnt-1;
     };
     pos_emoji = pos_cnt%5;
@@ -65,20 +65,20 @@ void loop() {
 
   // print the results to the Serial Monitor:
   // 選択画面の場合
-  if (outputValue_Y < 1){
+  if (outputValue_Y < 20){
     // シリアルモニタに表示
     Serial.print("I am ");
     Serial.print(mydevice_number);
     Serial.print("\n");
-    Serial.print("output_X = ");
-    Serial.print(outputValue_X);
+//    Serial.print("output_X = ");
+//    Serial.print(outputValue_X);
     Serial.print("emoji_X = ");
     Serial.println(pos_emoji);
   //  Serial.print("\t output_Y = ");
   //  Serial.println(outputValue_Y);
   };
   // 確定送信の場合
-  if (outputValue_Y > 1){
+  if (outputValue_Y > 80){
     // シリアルモニタに表示
     Serial.print("\n");
     Serial.print("I am ");
