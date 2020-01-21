@@ -15,13 +15,12 @@
 //キャンディごとに指定するデバイスナンバー
 const int mydevice_number = 8;
 //工場出荷時に絵文字を登録するところ
-
 const String EMOJI[22] = {
-  ":困惑:",":不安:",":ちょっと悲しい:",":むかっ:",":ポカーン:",
-  ":おお:",":ヒー:",":照れちゃう:",":あきれた:",":信じらんない:",
-  ":ゾッ:",":たらり:",":困ったあ:",":うぇーん:",":大泣き:",
-  ":ギャー:",":めっちゃ困った:",":困った:",":ガッカリ:",":タラー:",
-  ":げっそり:",":うわーん:"
+  ":confused:",":worried:",":slightly_frowning_face:",":white_frowning_face:",":open_mouth:",
+  ":hushed:",":astonished:",":flushed:",":frowning:",":anguished:",
+  ":fearful:",":cold_sweat:",":disappointed_relieved:",":cry:",":sob:",
+  ":scream:",":confounded:",":persevere:",":disappointed:",":sweat:",
+  ":weary:",":tired_face:"
 };
 String hoge = "fuga";
 

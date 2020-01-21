@@ -15,15 +15,14 @@
 //キャンディごとに指定するデバイスナンバー
 const int mydevice_number = 8;
 //工場出荷時に絵文字を登録するところ
-
 const String EMOJI[33] = {
-  ":キス:",":ラブレター:",":胸キュンハート:",":プレゼントハート:",":キラキラハート:",
-  ":ドキドキハート:",":ワクワクハート:",":くるりんハート:",":ダブルハート:",":ハートスタンプ:",
-  ":びっくりハート:",":失恋ハート:",":ハート:",":オレンジハート:",":イエローハート:",
-  ":グリーンハート:",":ブルーハート:",":パープルハート:",":ブラックハート:",":100点:",
-  ":怒り:",":バーン:",":目が回る:",":アセアセ:",":ダッシュ:",
-  ":穴:",":爆弾:",":入力中アイコン:",":吹き出しの目:",":黒い吹き出し:",
-  ":怒りの吹き出し:",":考えの吹き出し:",":zzz:"
+  ":kiss:",":love_letter:",":cupid:",":gift_heart:",":sparkling_heart:",
+  ":heartpulse:",":heartbeat:",":revolving_hearts:",":two_hearts:",":heart_decoration:",
+  ":heavy_heart_exclamation_mark_ornament:",":broken_heart:",":heart:",":orange_heart:",":yellow_heart:",
+  ":green_heart:",":blue_heart:",":purple_heart:",":black_heart:",":100:",
+  ":anger:",":boom:",":dizzy:",":sweat_drops:",":dash:",
+  ":hole:",":bomb:",":speech_balloon:",":eye-in-speech-bubble:",":left_speech_bubble:",
+  ":right_anger_bubble:",":thought_balloon:",":zzz:"
 };
 String hoge = "fuga";
 

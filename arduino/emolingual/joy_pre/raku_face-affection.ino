@@ -15,10 +15,9 @@
 //キャンディごとに指定するデバイスナンバー
 const int mydevice_number = 8;
 //工場出荷時に絵文字を登録するところ
-
 const String EMOJI[7] = {
-  ":ハート目:",":目が星:",":ハートキス:",":ぶー:",":うふふ:",
-  ":チュチュチュ:",":チュ:"
+  ":heart_eyes:",":star-struck:",":kissing_heart:",":kissing:",":relaxed:",
+  ":kissing_closed_eyes:",":kissing_smiling_eyes:"
 };
 String hoge = "fuga";
 

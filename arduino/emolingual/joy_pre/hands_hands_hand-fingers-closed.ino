@@ -17,9 +17,9 @@ const int mydevice_number = 8;
 //工場出荷時に絵文字を登録するところ
 
 const String EMOJI[12] = {
-  ":拍手:",":バンザイ:",":開いた両手:",":両手ですくう:",":握手:",
-  ":祈る:",":+1:",":-1:",":こぶし:",":グーパンチ:",
-  ":左向きパンチ:",":右向きのこぶし:"
+  ":clap:",":raised_hands:",":open_hands:",":palms_up_together:",":handshake:",
+  ":pray:",":+1:",":-1:",":fist:",":facepunch:",
+  ":left-facing_fist:",":right-facing_fist:"
 };
 String hoge = "fuga";
 

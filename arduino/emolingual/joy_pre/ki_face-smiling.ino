@@ -16,11 +16,10 @@
 const int mydevice_number = 8;
 //工場出荷時に絵文字を登録するところ
 
-
 const String EMOJI[13] = {
-  ":あはは:",":スマイリー:",":スマイル:",":ニヤ:",":ハハハ:",
-  ":苦笑い:",":ウケる:",":爆笑:",":にこっ:",":逆立ちでにこっ:",
-  ":ウィンク:",":ぽっ:",":天使の笑顔:"
+  ":grinning:",":smiley:",":smile:",":grin:",":laughing:",
+  ":sweat_smile:",":rolling_on_the_floor_laughing:",":joy:",":slightly_smiling_face:",":upside_down_face:",
+  ":wink:",":blush:",":innocent:"
 };
 String hoge = "fuga";
 
