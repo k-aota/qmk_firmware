@@ -15,19 +15,19 @@
 //キャンディごとに指定するデバイスナンバー
 const int mydevice_number = 8;
 //工場出荷時に絵文字を登録するところ
-const String EMOJI[22] = {
+const int emoji_size = 22;
+const String EMOJI[emoji_size] = {
   ":confused:",":worried:",":slightly_frowning_face:",":white_frowning_face:",":open_mouth:",
   ":hushed:",":astonished:",":flushed:",":frowning:",":anguished:",
   ":fearful:",":cold_sweat:",":disappointed_relieved:",":cry:",":sob:",
   ":scream:",":confounded:",":persevere:",":disappointed:",":sweat:",
   ":weary:",":tired_face:"
 };
-String hoge = "fuga";
 
 //左右トグルで絵文字を選択するときの操作変数
 int pos_cnt = 5000;
-//操作変数を絵文字配列に対応させるために5で割る
-int pos_emoji = pos_cnt%5;
+//操作変数を絵文字配列に対応させるためにemoji_sizeで割る
+int pos_emoji = pos_cnt%emoji_size;
 ////キャンディのactive(絵文字選択状態)がtrue
 //boolean candy_act = false;
 //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -66,7 +66,7 @@ void loop() {
     if (outputValue_X < 20){
       pos_cnt = pos_cnt-1;
     };
-    pos_emoji = pos_cnt%5;
+    pos_emoji = pos_cnt%emoji_size;
   }
 
   // print the results to the Serial Monitor:
@@ -84,7 +84,7 @@ void loop() {
   //  Serial.println(outputValue_Y);
   };
   // 確定送信の場合
-  if (outputValue_Y > 80){
+  if (outputValue_Y > 70){
     // シリアルモニタに表示
     Serial.print("\n");
     Serial.print("I am ");

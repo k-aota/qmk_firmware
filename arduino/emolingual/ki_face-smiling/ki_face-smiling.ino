@@ -15,16 +15,17 @@
 //キャンディごとに指定するデバイスナンバー
 const int mydevice_number = 8;
 //工場出荷時に絵文字を登録するところ
-const String EMOJI[8] = {
-  ":triumph:",":rage:",":angry:",":face_with_symbols_on_mouth:",":smiling_imp:",
-  ":imp:",":skull:",":skull_and_crossbones:"
+const int emoji_size = 13;
+const String EMOJI[emoji_size] = {
+  ":grinning:",":smiley:",":smile:",":grin:",":laughing:",
+  ":sweat_smile:",":rolling_on_the_floor_laughing:",":joy:",":slightly_smiling_face:",":upside_down_face:",
+  ":wink:",":blush:",":innocent:"
 };
-String hoge = "fuga";
 
 //左右トグルで絵文字を選択するときの操作変数
 int pos_cnt = 5000;
-//操作変数を絵文字配列に対応させるために5で割る
-int pos_emoji = pos_cnt%5;
+//操作変数を絵文字配列に対応させるためにemoji_sizeで割る
+int pos_emoji = pos_cnt%emoji_size;
 ////キャンディのactive(絵文字選択状態)がtrue
 //boolean candy_act = false;
 //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -63,7 +64,7 @@ void loop() {
     if (outputValue_X < 20){
       pos_cnt = pos_cnt-1;
     };
-    pos_emoji = pos_cnt%5;
+    pos_emoji = pos_cnt%emoji_size;
   }
 
   // print the results to the Serial Monitor:

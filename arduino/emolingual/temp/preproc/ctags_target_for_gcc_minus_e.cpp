@@ -1,13 +1,20 @@
+# 1 "C:\\Users\\k_aot\\Documents\\qmk_aota\\arduino\\emolingual\\joy_pre\\joy_pre.ino"
 /*
+
   http://www.arduino.cc/en/Tutorial/AnalogInOutSerial
+
 */
-#include <Wire.h>
+# 4 "C:\\Users\\k_aot\\Documents\\qmk_aota\\arduino\\emolingual\\joy_pre\\joy_pre.ino"
+# 5 "C:\\Users\\k_aot\\Documents\\qmk_aota\\arduino\\emolingual\\joy_pre\\joy_pre.ino" 2
 
 //めも
 //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 /*
+
 相手はとりあえず[slave_receiver]で動作確認
+
 */
+# 11 "C:\\Users\\k_aot\\Documents\\qmk_aota\\arduino\\emolingual\\joy_pre\\joy_pre.ino"
 //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 //自作変数
@@ -15,12 +22,7 @@
 //キャンディごとに指定するデバイスナンバー
 const int mydevice_number = 8;
 //工場出荷時に絵文字を登録するところ
-
-const String EMOJI[13] = {
-  ":grinning:",":smiley:",":smile:",":grin:",":laughing:",
-  ":sweat_smile:",":rolling_on_the_floor_laughing:",":joy:",":slightly_smiling_face:",":upside_down_face:",
-  ":wink:",":blush:",":innocent:"
-};
+const String EMOJI[5] = {":innocent:",":neutral_face:",":sunglasses:",":heart_eyes:",":relaxed:"};
 String hoge = "fuga";
 
 //左右トグルで絵文字を選択するときの操作変数
@@ -32,13 +34,13 @@ int pos_emoji = pos_cnt%5;
 //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 // These constants won't change. They're used to give names to the pins used:
-const int analogInPin_X = A0;  // Analog input pin that the potentiometer is attached to
-const int analogInPin_Y = A1;  // Analog input pin that the potentiometer is attached to
+const int analogInPin_X = A0; // Analog input pin that the potentiometer is attached to
+const int analogInPin_Y = A1; // Analog input pin that the potentiometer is attached to
 
-int sensorValue_X = 0;        // value read from the pot
-int outputValue_X = 0;        // value output to the PWM (analog out)
-int sensorValue_Y = 0;        // value read from the pot
-int outputValue_Y = 0;        // value output to the PWM (analog out)
+int sensorValue_X = 0; // value read from the pot
+int outputValue_X = 0; // value output to the PWM (analog out)
+int sensorValue_Y = 0; // value read from the pot
+int outputValue_Y = 0; // value output to the PWM (analog out)
 
 
 
@@ -95,8 +97,8 @@ void loop() {
     Wire.beginTransmission(8); // transmit to device #8
 //    Wire.write("emoji");        // sends five bytes
     Wire.print(EMOJI[pos_emoji]);
-    Wire.write(pos_emoji);              // sends one byte
-    Wire.endTransmission();    // stop transmitting
+    Wire.write(pos_emoji); // sends one byte
+    Wire.endTransmission(); // stop transmitting
   };
 
 

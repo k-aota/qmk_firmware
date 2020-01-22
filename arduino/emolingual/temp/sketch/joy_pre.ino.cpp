@@ -1,3 +1,5 @@
+#include <Arduino.h>
+#line 1 "C:\\Users\\k_aot\\Documents\\qmk_aota\\arduino\\emolingual\\joy_pre\\joy_pre.ino"
 /*
   http://www.arduino.cc/en/Tutorial/AnalogInOutSerial
 */
@@ -15,10 +17,7 @@
 //キャンディごとに指定するデバイスナンバー
 const int mydevice_number = 8;
 //工場出荷時に絵文字を登録するところ
-const String EMOJI[7] = {
-  ":heart_eyes:",":star-struck:",":kissing_heart:",":kissing:",":relaxed:",
-  ":kissing_closed_eyes:",":kissing_smiling_eyes:"
-};
+const String EMOJI[5] = {":innocent:",":neutral_face:",":sunglasses:",":heart_eyes:",":relaxed:"};
 String hoge = "fuga";
 
 //左右トグルで絵文字を選択するときの操作変数
@@ -40,6 +39,11 @@ int outputValue_Y = 0;        // value output to the PWM (analog out)
 
 
 
+#line 40 "C:\\Users\\k_aot\\Documents\\qmk_aota\\arduino\\emolingual\\joy_pre\\joy_pre.ino"
+void setup();
+#line 46 "C:\\Users\\k_aot\\Documents\\qmk_aota\\arduino\\emolingual\\joy_pre\\joy_pre.ino"
+void loop();
+#line 40 "C:\\Users\\k_aot\\Documents\\qmk_aota\\arduino\\emolingual\\joy_pre\\joy_pre.ino"
 void setup() {
   // initialize serial communications at 9600 bps:
   Serial.begin(9600);
@@ -97,7 +101,8 @@ void loop() {
     Wire.endTransmission();    // stop transmitting
   };
 
-
+  
   // 絵文字選択速度はここで調整
   delay(300);
 }
+
